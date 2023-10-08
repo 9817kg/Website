@@ -1,4 +1,4 @@
-package com.fullstack2.sercurityTest.dto;
+package com.fullstack2.website.dtos;
 
 import java.time.LocalDateTime;
 
@@ -22,6 +22,7 @@ public class MemberJoinDto {
     private String postalCode;
     private String addressBasic;
     private String addressRest;
+    private String Provider;
     
     
     private String mobile;

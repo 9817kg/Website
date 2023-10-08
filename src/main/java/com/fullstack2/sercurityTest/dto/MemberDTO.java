@@ -1,4 +1,4 @@
-package com.fullstack2.sercurityTest.dto;
+package com.fullstack2.website.dtos;
 
 import java.time.LocalDateTime;
 
@@ -34,4 +34,6 @@ public class MemberDTO {
     private String birthDay; // 수정: 생일
     
     private String role;
+    private String provider;
+    
 }
