@@ -1,4 +1,4 @@
-package com.fullstack2.sercurityTest.config;
+package com.fullstack2.website.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.fullstack2.sercurityTest.domain.Member;
-import com.fullstack2.sercurityTest.service.MemberService;
+import com.fullstack2.website.entity.Member;
+import com.fullstack2.website.service.MemberService;
 
 import java.util.Optional;
 

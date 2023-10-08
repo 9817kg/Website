@@ -1,4 +1,4 @@
-package com.fullstack2.sercurityTest.config;
+package com.fullstack2.website.config;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 
