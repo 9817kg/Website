@@ -1,4 +1,4 @@
-package com.fullstack2.sercurityTest.controller;
+package com.fullstack2.website.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,14 +6,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fullstack2.sercurityTest.dto.MemberDTO;
+import com.fullstack2.website.dtos.MemberDTO;
+import com.fullstack2.website.service.RegisterMemberService;
 
-import com.fullstack2.sercurityTest.service.RegisterMemberService;
+
+
 
 @RestController
 @RequestMapping("/auth")
 public class AuthorizationController {
-
+    
     private final RegisterMemberService registerMemberService;
 
     public AuthorizationController(RegisterMemberService registerMemberService) {
@@ -43,7 +45,10 @@ public class AuthorizationController {
 	                 // 여기서 조합한 mobile 값을 전달
 	                dto.getBirthYear(), 
 	                dto.getBirthMonth(),
-	                dto.getBirthDay()
+	                dto.getBirthDay(),
+	                
+	                dto.getRole(),
+	                dto.getProvider()
 	               
 	            );
 	            
