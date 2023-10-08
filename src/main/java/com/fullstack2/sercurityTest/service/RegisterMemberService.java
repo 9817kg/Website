@@ -1,12 +1,13 @@
-package com.fullstack2.sercurityTest.service;
+package com.fullstack2.website.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.sercurityTest.domain.Member;
-import com.fullstack2.sercurityTest.repository.MemberRepository;
+import com.fullstack2.website.entity.Member;
+import com.fullstack2.website.repository.MemberRepository;
+
 
 @Service
 public class RegisterMemberService {
@@ -35,14 +36,18 @@ public class RegisterMemberService {
 	    String mobileExt,
 	    String birthYear, // 수정: 생년
 	    String birthMonth,// 수정: 생월
-	    String birthDay
+	    String birthDay,
+	    String role,
+	    String provider
+            
+	    
 	    ) {
 	 // 일반전화 및 휴대전화 조합
 	    String phone = phoneArea + "-" + phoneNumber + "-" + phoneExt;
 	    String  mobile = mobileArea + "-" + mobileNumber + "-" + mobileExt;
 	    String birth =birthYear + "-" + birthMonth+ "-" + birthDay;
 	
-	Member member = Member.createUser(email, password, name, postalCode, addressBasic, addressRest, phone, mobile, birth, passwordEncoder);
+	Member member = Member.createMember(email, password, name, postalCode, addressBasic, addressRest, phone, mobile, birth, passwordEncoder);
         validateDuplicateMember(member);
         repository.save(member);
 

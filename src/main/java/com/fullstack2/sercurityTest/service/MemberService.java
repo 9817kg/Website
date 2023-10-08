@@ -1,10 +1,10 @@
-package com.fullstack2.sercurityTest.service;
+package com.fullstack2.website.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.sercurityTest.domain.Member;
-import com.fullstack2.sercurityTest.repository.MemberRepository;
+import com.fullstack2.website.entity.Member;
+import com.fullstack2.website.repository.MemberRepository;
 
 import java.util.Optional;
 
