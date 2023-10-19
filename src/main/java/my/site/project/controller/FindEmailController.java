@@ -1,4 +1,4 @@
-package com.fullstack2.website.findPw;
+package my.site.project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.fullstack2.website.dtos.MemberDTO;
-import com.fullstack2.website.repository.MemberQuery;
+import my.site.project.dto.MemberDTO;
+import my.site.project.repository.MemberQuery;
 
 
 
