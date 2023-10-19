@@ -1,9 +1,9 @@
-package com.fullstack2.website.service;
+package my.site.project.service;
 
-import com.fullstack2.website.dtos.NoticeDTO;
-import com.fullstack2.website.dtos.NoticePageRequestDTO;
-import com.fullstack2.website.dtos.NoticePageResultDTO;
-import com.fullstack2.website.entity.Notice;
+import my.site.project.dto.NoticeDTO;
+import my.site.project.dto.NoticePageRequestDTO;
+import my.site.project.dto.NoticePageResultDTO;
+import my.site.project.entity.Notice;
 
 public interface NoticeService {
 
