@@ -1,4 +1,4 @@
-package com.fullstack2.website.dtos;
+package my.site.project.dto;
 
 import java.util.List;
 import java.util.function.Function;
