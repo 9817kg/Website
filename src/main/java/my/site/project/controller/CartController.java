@@ -1,4 +1,4 @@
-package com.fullstack2.website.controller;
+package my.site.project.controller;
 
 
 import jakarta.servlet.http.HttpSession;
@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.fullstack2.website.dtos.MemberJoinDto;
-import com.fullstack2.website.repository.CartRepository;
-import com.fullstack2.website.repository.MemberQuery;
-import com.fullstack2.website.service.MemberService;
-import com.fullstack2.website.entity.Cart;
-import com.fullstack2.website.oauth2.UserProfile;
+import my.site.project.dto.MemberJoinDto;
+import my.site.project.repository.CartRepository;
+import my.site.project.repository.MemberQuery;
+import my.site.project.service.MemberService;
+import my.site.project.entity.Cart;
+import my.site.project.oauth2.UserProfile;
 
 import java.util.List;
 import java.util.Optional;
