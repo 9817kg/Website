@@ -1,4 +1,4 @@
-package com.fullstack2.website.controller;
+package  my.site.project.controller;
 
 
 
@@ -14,23 +14,23 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fullstack2.website.dtos.NoticePageRequestDTO;
-import com.fullstack2.website.dtos.QnADTO;
-import com.fullstack2.website.dtos.QnAPageRequestDTO;
-import com.fullstack2.website.dtos.QnAPageResultDTO;
-import com.fullstack2.website.dtos.ReviewDTO;
-import com.fullstack2.website.dtos.ReviewPageRequestDTO;
-import com.fullstack2.website.dtos.ReviewPageResultDTO;
-import com.fullstack2.website.entity.Notice;
-import com.fullstack2.website.entity.Product;
-import com.fullstack2.website.entity.QnA;
-import com.fullstack2.website.entity.Review;
-import com.fullstack2.website.repository.NoticeRepository;
-import com.fullstack2.website.repository.QnARepository;
-import com.fullstack2.website.repository.ReviewRepository;
-import com.fullstack2.website.service.Product_Service;
-import com.fullstack2.website.service.QnAService;
-import com.fullstack2.website.service.ReviewService;
+import  my.site.project.dto.NoticePageRequestDTO;
+import  my.site.project.dto.QnADTO;
+import  my.site.project.dto.QnAPageRequestDTO;
+import my.site.project.dto.QnAPageResultDTO;
+import my.site.project.dto.ReviewDTO;
+import my.site.project.dto.ReviewPageRequestDTO;
+import my.site.project.dto.ReviewPageResultDTO;
+import  my.site.project.entity.Notice;
+import  my.site.project.entity.Product;
+import  my.site.project.entity.QnA;
+import  my.site.project.entity.Review;
+import  my.site.project.repository.NoticeRepository;
+import  my.site.project.repository.QnARepository;
+import  my.site.project.repository.ReviewRepository;
+import  my.site.project.service.Product_Service;
+import  my.site.project.service.QnAService;
+import  my.site.project.service.ReviewService;
 
 import lombok.RequiredArgsConstructor;
 
