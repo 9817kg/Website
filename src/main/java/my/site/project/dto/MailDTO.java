@@ -1,4 +1,4 @@
-package com.fullstack2.website.findPw;
+package  my.site.project.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
