@@ -1,4 +1,4 @@
-package com.fullstack2.website.findPw;
+package my.site.project.findPw;
 
 import lombok.AllArgsConstructor;
 
