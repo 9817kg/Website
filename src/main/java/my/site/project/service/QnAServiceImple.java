@@ -1,15 +1,15 @@
-package com.fullstack2.website.service;
+package my.site.project.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.website.dtos.QnADTO;
-import com.fullstack2.website.dtos.QnAPageRequestDTO;
-import com.fullstack2.website.dtos.QnAPageResultDTO;
-import com.fullstack2.website.entity.QnA;
-import com.fullstack2.website.repository.QnARepository;
-import com.fullstack2.website.repository.ReviewRepository;
+import my.site.project.dto.QnADTO;
+import my.site.project.dto.QnAPageRequestDTO;
+import my.site.project.dto.QnAPageResultDTO;
+import my.site.project.entity.QnA;
+import my.site.project.repository.QnARepository;
+import my.site.project.repository.ReviewRepository;
 
 import lombok.RequiredArgsConstructor;
 
