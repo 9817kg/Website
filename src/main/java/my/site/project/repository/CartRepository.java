@@ -1,6 +1,6 @@
-package com.fullstack2.website.repository;
+package my.site.project.repository;
 
-import com.fullstack2.website.entity.Cart;
+import my.site.project.entity.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
