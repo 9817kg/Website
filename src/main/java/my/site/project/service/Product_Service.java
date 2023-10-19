@@ -1,8 +1,8 @@
-package com.fullstack2.website.service;
+package my.site.project.service;
 
 
-import com.fullstack2.website.entity.Product;
-import com.fullstack2.website.repository.ProductRepository;
+import my.site.project.entity.Product;
+import my.site.project.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 
