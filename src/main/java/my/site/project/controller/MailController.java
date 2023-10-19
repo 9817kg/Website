@@ -1,4 +1,4 @@
-package com.fullstack2.website.findPw;
+package com.fullstack2.website.controller;
 
 import lombok.AllArgsConstructor;
 
