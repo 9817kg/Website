@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fullstack2.website.dtos.MemberJoinDto;
 import com.fullstack2.website.dtos.NoticeDTO;
@@ -22,6 +24,7 @@ import com.fullstack2.website.dtos.QnAPageResultDTO;
 import com.fullstack2.website.dtos.ReviewDTO;
 import com.fullstack2.website.dtos.ReviewPageRequestDTO;
 import com.fullstack2.website.dtos.ReviewPageResultDTO;
+import com.fullstack2.website.entity.Member;
 import com.fullstack2.website.entity.Notice;
 import com.fullstack2.website.entity.Product;
 import com.fullstack2.website.entity.QnA;
@@ -47,9 +50,9 @@ public class UserController {
     private final QnAService qnaService;
     private final NoticeService noticeService;
     
-
+    
    
-
+ 
     @GetMapping("/sns")
     public String snsPage(HttpSession session, Model model) {
 	Object dtoObject = session.getAttribute("dto");
@@ -70,7 +73,42 @@ public class UserController {
     public String home() {
 	return "home"; // 홈 페이지
     }
-
+    
+    @GetMapping("/product_list")
+    public String product_list() {
+	
+	return "product_list";
+    }
+   
+  
+    @GetMapping("/qna_manage")
+    public String qna_manage() {
+	
+	return "qna_manage";
+    }
+   
+    @GetMapping("/user_list")
+    public String user_list(HttpSession session, Model model) {
+            // 전체 회원 목록을 가져온다
+            List<Member> members = memberService.getAllMembers();
+            model.addAttribute("members", members);
+            return "user_list";
+    }
+    @DeleteMapping("/deleteMember/{memberId}")
+    @ResponseBody
+    public String deleteMember(@PathVariable Long memberId) {
+        try {
+            // 회원을 삭제하는 비즈니스 로직 수행
+            memberService.deleteMemberById(memberId);
+            return "success";
+        } catch (Exception e) {
+            System.err.println("삭제 중 예외 발생 : " + e.getMessage());
+            return "error";
+        }
+    }
+    
+    
+    
     @GetMapping("/main")
     public String main() {
 	return "main"; // 메인 페이지
