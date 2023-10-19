@@ -1,10 +1,10 @@
-package com.fullstack2.website.oauth2;
+package my.site.project.oauth2;
 
 
 
 import java.time.LocalDateTime;
 
-import com.fullstack2.website.entity.Member;
+import my.site.project.entity.Member;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
