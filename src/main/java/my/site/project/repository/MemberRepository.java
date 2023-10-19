@@ -1,10 +1,10 @@
-package com.fullstack2.website.repository;
+package my.site.project.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.fullstack2.website.entity.Member;
+import my.site.project.entity.Member;
 
 import java.util.Optional;
 @Repository
