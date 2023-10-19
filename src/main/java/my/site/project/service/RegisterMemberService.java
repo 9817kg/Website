@@ -1,12 +1,12 @@
-package com.fullstack2.website.service;
+package my.site.project.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.website.entity.Member;
-import com.fullstack2.website.repository.MemberRepository;
+import my.site.project.entity.Member;
+import my.site.project.repository.MemberRepository;
 
 
 @Service
