@@ -144,37 +144,33 @@ input[type="password"] {
 	<div th:replace="${dto.provider == '일반가입' ? 'header2.html' : 'header3.html'}"></div>
 
 	<div class="container">
-		<h2>나의 배송지</h2>
+		<h2>주소 변경</h2>
 		<div class="form-container">
-			<form action="checkAddress" method="post">
+			<form action="/info/manageaddress" method="post">
 				<div class="select-group">
-					<input type="text" id="newPostalCode" name="newPostalCode"
+					<input type="text" id="postcode" name="newPostalCode"
 						th:value="${dto.postalCode}"> <input type="text"
-						id="newAddressBasic" name="newAddressBasic"
+						id="roadAddress" name="newAddressBasic"
 						th:value="${dto.addressBasic}"> <input type="text"
-						id="newAddressRest" name="newAddressRest"
+						id="address-rest" name="newAddressRest"
 						th:value="${dto.addressRest}">
 				</div>
-
-				<button type="submit" class="btn-primary">배송지 변경</button> | <button type="submit" class="btn-primary">배송지 추가</button>
+				
+				<div class="password-mismatch" id="passwordMismatch"></div>
+				<button type="submit" class="btn-primary">수정 완료</button>
 			</form>
+			<br>
+
+			<div>
+
+				<button onclick="openKakaoAddressSearch()" class="btn-primary">우편번호
+					검색</button>
+
+			</div>
+
+
 		</div>
 	</div>
-	<script th:inline="javascript">
-		var message = /*[[${param.message}]]*/'';
-
-		$(document).ready(function() {
-			// 로그인 성공 또는 실패 메시지를 가져와서 표시
-			console.log('message 변수 값:', message); // 변수 값을 로깅
-			if (message[0] === 'completeUpdateAd') {
-				console.log(message[0]);
-				alert("주소지 변경완료");
-			}else if(message[0] === 'fail'){
-				alert("주소지 변경을 실패하였습니다.");
-			}
-		});
-	</script>
-
 
 
 	<!--  <input type="text" id="postcode" placeholder="우편번호">

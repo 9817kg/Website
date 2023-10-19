@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f4;
+}
+
+.container {
+   max-width: 900px;
+   height: 700px;
+   margin-top: 100px;
+   margin-left: 500px;
+   /* margin: 0 auto; */
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+label {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+   width: 85%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+textarea {
+   height: 400px;
+}
+
+button {
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
+}
+
+button:hover {
+   background-color: #0056b3;
+}
+
+.success-message {
+   color: green;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+/* 메뉴 스타일 */
+.sidebar {
+   display: absolute;
+   margin-top: 0px;;
+   margin-left: 50px;
+   margin-right: -200px;
+   background-color: #007BFF;
+   color: #fff;
+   padding: 10px;
+   width: 15%;
+   float: left;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+   font-size: 20px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+.sidebar ul {
+   list-style: none;
+   padding: 0;
+}
+
+.sidebar ul li {
+   margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+   text-decoration: none;
+   color: #fff;
+   display: block;
+   padding: 10px 0;
+   text-align: center;
+   font-weight: bold;
+   transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+   background-color: #0056b3;
+}
+
+.sidebar ul li.active {
+   background-color: #0056b390;
+   /* border:1px dashed #ffffff; */
+   opacity: 1;
+}
+
+.admin-panel {
+   margin-left: 25%;
+}
+
+h2 {
+   text-align: center;
+}
+</style>
+</head>
+<body>
+   <div class="sidebar">
+      <ul>
+         <li class="active"><a href="admin">상품 등록</a></li>
+         <li><a href="product_list">상품 목록</a></li>
+         <li><a href="/my/product_reviews">상품 소감</a></li>
+         <li><a href="qna_manage">문의 관리</a></li>
+         <li><a href="/my/noticemanage">공지사항</a></li>
+         <li><a href="user_list">유저 목록</a></li>
+      </ul>
+   </div>
+   <div class="container">
+    <h2>공지사항 작성</h2>
+    <form id="noticeForm" th:action="@{/addNotice}" method="post">
+        <div class="form-group">
+            <label for="title">제목</label> 
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea id="content" name="content" required></textarea>
+        </div>
+        <button type="submit">작성 완료</button>
+    </form>
+    <p class="success-message" id="successMessage" th:if="${param.success}" style="display: none;">글이 성공적으로 작성되었습니다.</p>
+</div>
+
+   <script>
+   document.getElementById('noticeForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // 폼 제출 방지
+
+        // 입력값 가져오기
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+
+        // FormData를 사용하여 폼 데이터 생성
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('content', content);
+
+        // Fetch API를 사용하여 서버에 데이터를 전송
+        fetch('/addNotice', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.status === 200) {
+                // 성공 메시지 표시
+                document.getElementById('successMessage').style.display = 'block';
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 3000); // 3초 후 메시지 숨김
+            } else {
+                // 실패 시 처리
+                console.error('글 작성 실패');
+            }
+        })
+        .catch(error => {
+            console.error('오류 발생: ' + error);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,102 +30,25 @@ h2 {
 	color: #333;
 }
 
-.user-info {
-	background-color: #f0f0f0;
-	padding: 10px;
-	border-radius: 5px;
-	margin-bottom: 20px;
-}
-
-.arrow-section {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.arrow-section a {
-	text-decoration: none;
-	color: #007BFF;
-	font-size: 20px;
-}
-
-.benefit-info {
-	background-color: white;
-	color: black;
-	border-radius: 5px;
-	padding: 20px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	font-family: "Arial", sans-serif;
-}
-
-.benefit-info p {
-	margin: 5px 0;
-	font-size: 16px;
-}
-
-.benefit-info p:first-child {
-	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
 .cart-items {
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	padding: 10px;
 	margin-bottom: 20px;
+	overflow-x: auto; /* 가로 스크롤 활성화 */
 }
 
-.cart-item {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	margin-bottom: 20px;
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: center;
 	padding: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }
 
-.cart-item-image{
-	margin-right:100px;
-}
-
-.cart-item img {
-	max-width: 100px;
-	max-height: 100px;
-	margin-right: 20px;
-}
-
-.cart-item-details {
-	flex-grow: 1;
-}
-
-.cart-item-details h3 {
-	font-size: 20px;
-	margin: 0;
-}
-
-.cart-item-price {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.cart-item-actions {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-.cart-item-quantity {
-	font-size: 16px;
-	margin-bottom: 5px;
-}
-
-.cart-item-total {
-	font-size: 18px;
-	font-weight: bold;
-	color: #007BFF;
+th {
+	background-color: #f0f0f0;
 }
 
 .cart-item-checkbox {
@@ -136,9 +59,8 @@ h2 {
 	border: 2px solid #ccc;
 	border-radius: 3px;
 	cursor: pointer;
-	margin: 0;
 	position: relative;
-	margin-right:10px;
+	margin-right: 10px;
 }
 
 .cart-item-checkbox::before {
@@ -159,35 +81,6 @@ h2 {
 	opacity: 1;
 }
 
-.checkout-button {
-	background-color: #007BFF;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	font-size: 18px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin-top: 20px;
-}
-
-.checkout-button:hover {
-	background-color: #0056b3;
-}
-
-.order-summary {
-	background-color: #f0f0f0;
-	border-radius: 5px;
-	padding: 20px;
-	margin-top: 20px;
-}
-
-.order-summary-total {
-	font-size: 18px;
-	font-weight: bold;
-	margin-top: 10px;
-}
-
 .page-steps {
 	display: flex;
 	justify-content: space-between;
@@ -206,23 +99,170 @@ h2 {
 	color: #007BFF;
 }
 
+.n1 {
+	font-size: 24px;
+	margin-bottom: 5px;
+	color: red;
+}
+
 .page-step-title {
 	font-size: 18px;
 	font-weight: bold;
 	color: #333;
 }
+
+.benefit-info {
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	font-family: "Arial", sans-serif;
+}
+
+.benefit-info p {
+	margin: 10px 0; /* 글자 사이 여백 추가 */
+	font-size: 16px;
+}
+
+.benefit-info p:first-child {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px; /* 첫 번째 항목 아래 여백 추가 */
+}
+/* 두 번째 테이블 스타일 */
+.summary-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.summary-table th, .summary-table td {
+	text-align: center;
+	padding: 10px;
+}
+
+.summary-table th {
+	background-color: #f0f0f0;
+	font-weight: bold;
+	color: #333;
+}
+
+/* 두 번째 테이블 내용 행 스타일 */
+.summary-table tbody tr {
+	font-size: 18px;
+	font-weight: bold;
+	color: #007BFF;
+}
+
+.summary-table tbody td {
+	padding: 10px 20px;
+	border-top: 1px solid #ccc;
+	font-size: 18px;
+}
+
+/* 두 번째 테이블 총합 금액 스타일 */
+.summary-table tfoot {
+	background-color: #f0f0f0;
+}
+
+.summary-table tfoot tr td {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	padding: 10px 20px;
+}
+
+/* 버튼 스타일 */
+.order-all, .order-check {
+	padding: 10px 20px; /* 버튼 내부 여백 */
+	background-color: #007BFF; /* 배경색 */
+	color: #fff; /* 텍스트 색상 */
+	border: none; /* 테두리 제거 */
+	border-radius: 5px; /* 둥근 모서리 */
+	cursor: pointer;
+	font-size: 16px; /* 폰트 크기 */
+	margin-right: 10px; /* 오른쪽 여백 */
+	text-align: center; /* 텍스트 가운데 정렬 */
+	display: inline-block; /* 인라인 요소로 표시 */
+	transition: background-color 0.3s; /* 호버 시 배경색 전환 효과 */
+}
+
+/* 호버 시 배경색 변경 */
+.order-all:hover, .order-check:hover {
+	background-color: #0056b3; /* 호버 시 배경색 변경 */
+}
+
+.order-button {
+	text-align: center;
+}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+	// 전체 선택/해제 체크 박스 클릭 시
+	$(document).ready(function() {
+		$('#selectAllCheckbox').on('click', function() {
+			$('.cart-item-checkbox').prop('checked', this.checked);
+		});
+	});
+
+	// 페이지가 로드될 때 실행
+	window.addEventListener('load', function() {
+		// 전체 상품 주문 버튼 클릭 시
+		var orderAllButton = document.querySelector('.order-all');
+		orderAllButton.addEventListener('click', function() {
+			// 모든 체크박스 선택
+			var cartItemCheckboxes = document
+					.querySelectorAll('.cart-item-checkbox');
+			for (var i = 0; i < cartItemCheckboxes.length; i++) {
+				cartItemCheckboxes[i].checked = true;
+			}
+
+			// 주문 페이지로 이동 (cartn2.html로 가정)
+			location.href = 'cart2.html';
+		});
+
+		// 선택 상품 주문 버튼 클릭 시
+		var orderSelectedButton = document.querySelector('.order-check');
+		orderSelectedButton.addEventListener('click', function() {
+			// 선택된 체크박스 찾기
+			var selectedItems = [];
+			var cartItemCheckboxes = document
+					.querySelectorAll('.cart-item-checkbox');
+			for (var i = 0; i < cartItemCheckboxes.length; i++) {
+				if (cartItemCheckboxes[i].checked) {
+					selectedItems.push(i); // 선택된 상품 인덱스 추가
+				}
+			}
+
+			// 선택된 상품들에 대한 처리 (예: 선택된 상품만 주문 처리)
+			if (selectedItems.length > 0) {
+				// 주문 페이지로 이동 (cartn2.html로 가정)
+				location.href = 'cart2.html';
+			} else {
+				alert('선택된 상품이 없습니다.');
+			}
+		});
+	});
+</script>
+
+<script src="/js/cart.js"></script>
 </head>
 <body>
-	
-	<div th:replace="header.html"></div>
+	<div
+		th:replace="${dto.provider == '일반가입' ? 'header2.html' : 'header3.html'}"></div>
+
+
 	<div class="container">
 		<h2>장바구니</h2>
 		<hr>
 		<!-- 페이지 단계 -->
 		<div class="page-steps">
 			<div class="page-step">
-				<div class="page-step-icon">1</div>
+				<div class="n1">1</div>
 				<div class="page-step-title">장바구니</div>
 			</div>
 			<div class="page-step">
@@ -243,55 +283,144 @@ h2 {
 		<!-- 혜택 정보 -->
 		<div class="benefit-info">
 			<p>혜택정보</p>
-			<p>이도형 님은, [일반회원] 회원이십니다.</p>
+			<p th:text="${dto.name} + '님 환영합니다.'">여기 이름하고 일반회원이십니다.. 인데
+				일반회원..?></p>
 			<p>가용적립금 : 4,000원 | 쿠폰 : 0개</p>
 		</div>
-
 		<!-- 장바구니 항목 -->
 		<div class="cart-items">
-			<!-- 항목 헤더 -->
-			<div class="cart-item cart-item-header">
-			<div><input type="checkbox" class="cart-item-checkbox"></div>
-			<div class="cart-item-image">이미지</div>
-			<div class="cart-item-details">상품 정보</div>
-			<div class="cart-item-price">판매가</div>
-			<div class="cart-item-quantity">수량</div>
-			<div class="cart-item-earnings">적립금</div>
-			<div class="cart-item-shipping">배송구분</div>
-			<div class="cart-item-shipping-fee">배송비</div>
-			<div class="cart-item-total">합계</div>
-			<div class="cart-item-select">선택</div>
-		</div>
+			<table>
+				<!-- 항목 헤더 -->
+				<thead>
+					<tr>
+						<th><input type="checkbox" class="cart-item-checkbox"
+							id="selectAllCheckbox">전체 선택</th>
+						<th class="cart-item-image">이미지</th>
+						<th class="cart-item-details">상품 정보</th>
+						<th class="cart-item-earnings">적립금</th>
+						<th class="cart-item-shipping">배송구분</th>
+						<th class="cart-item-shipping-fee">배송비</th>
+						<th class="cart-item-total">판매가</th>
+						<th class="cart-item-select">선택</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="cart-item" th:each="lists : ${list}">
+						<td><input type="checkbox" class="cart-item-checkbox"></td>
+						<td class="cart-item-image"><img
+							style="width: 80px; height: 80px;"
+							th:src="'/' + ${lists.product.imglink}" alt="상품 이미지"></td>
+						<td class="cart-item-details">
+							<h3 th:text="${lists.product.itemname}">여기에 아이템 이름 들어감</h3>
+							<p th:text="'옵션 : ' + ${lists.size}">옵션 : [M]</p>
+						</td>
+						<td class="cart-item-earnings"></td>
+						<td class="cart-item-shipping">기본구분</td>
+						<td class="cart-item-shipping-fee">무료</td>
+						<td class="cart-item-price" th:text="'₩'+${lists.product.price}">₩189,000</td>
 
-		<div class="cart-items">
-			<!-- 장바구니 항목 반복 -->
-			<div class="cart-item">
-				<img src="product1.jpg" alt="상품 이미지">
-				<div class="cart-item-details">
-					<h3>Embroidery Flower Shirt White</h3>
-					<p>옵션 : [M]</p>
-				</div>
-				<div class="cart-item-price">₩189,000</div>
-				<div class="cart-item-actions">
-					<p class="cart-item-quantity">수량: 1</p>
-					<div>
-						<button>+</button>
-						<button>-</button>
-					</div>
-					<p class="cart-item-total">₩189,000</p>
-					<input type="checkbox"> 선택
-				</div>
-			</div>
-			<!-- 다른 장바구니 항목들을 동일한 형식으로 반복 -->
+						<td class="delete-buttons">
+							
+							<button class="checkout-button" onclick="deleteCartItem(this)">삭제</button>
+						</td>
+					</tr>
+				</tbody>
+
+
+
+			</table>
+			<table class="summary-table">
+				<!-- 테이블 내용 -->
+				<thead>
+					<tr>
+						<th>총 상품금액</th>
+
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+
+						<td class="total-price"><span id="totalProductPrice">₩[[${totalProductPrice}]]</span>
+
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<!-- 주문 버튼 -->
-		<button class="checkout-button">주문서 작성</button>
-		<!-- 주문 상품 요약 -->
-		<div class="order-summary">
-			<p>총 상품금액: ₩258,000</p>
-			<p>총 배송비: ₩0</p>
-			<p class="order-summary-total">결제예정금액: ₩258,000</p>
+		<div class="order-button">
+			<a href="/my/cart2" class="order-all">전체 상품 주문</a> <a
+				href="/my/cart2" class="order-check">선택 상품 주문</a>
 		</div>
 	</div>
 </body>
+<script>
+	// 페이지 로드 시 호출되는 함수
+	window.addEventListener('load', function() {
+		// 페이지 로드될 때 총 상품 금액을 업데이트
+		updateTotalProductPrice();
+
+		// 체크박스 상태가 변경될 때마다 총 상품 금액 업데이트
+		$('.cart-item-checkbox').on('change', function() {
+			updateTotalProductPrice();
+		});
+	});
+
+	// 상품 가격을 가져와서 총 상품 금액 계산하는 함수
+	function calculateTotalProductPrice() {
+		var total = 0;
+		$('.cart-item-checkbox:checked').each(
+				function() {
+					// 선택된 항목의 상품 가격을 가져와서 총액에 더함
+					var price = parseFloat($(this).closest('tr').find(
+							'.cart-item-price').text().replace('₩', '')
+							.replace(',', ''));
+					total += price;
+				});
+		return total;
+	}
+	
+	// 페이지 로드 시 호출되는 함수
+	window.addEventListener('load', function() {
+		// 페이지 로드될 때 총 상품 금액을 업데이트
+		updateTotalProductPrice();
+
+		// 전체 선택/해제 체크 박스 클릭 시
+		$('#selectAllCheckbox').on('change', function() {
+			$('.cart-item-checkbox').prop('checked', this.checked);
+			updateTotalProductPrice();
+		});
+
+		// 체크박스 상태가 변경될 때마다 총 상품 금액 업데이트
+		$('.cart-item-checkbox').on('change', function() {
+			updateTotalProductPrice();
+		});
+	});
+
+	// 상품 가격을 가져와서 총 상품 금액 계산하는 함수
+	function calculateTotalProductPrice() {
+		var total = 0;
+		$('.cart-item-checkbox:checked').each(function() {
+			// 선택된 항목의 상품 가격을 가져와서 총액에 더함
+			var price = parseFloat($(this).closest('tr').find('.cart-item-price').text().replace('₩', '').replace(',', '').trim()); // trim() 함수를 추가하여 공백을 제거
+			if (!isNaN(price)) {
+				total += price;
+			}
+		});
+		return total;
+	}
+
+	
+
+
+	// 총 상품 금액 업데이트 함수
+	function updateTotalProductPrice() {
+		var totalProductPrice = calculateTotalProductPrice();
+		$('#totalProductPrice').text(
+				'₩'
+						+ totalProductPrice.toFixed(0).replace(
+								/\B(?=(\d{3})+(?!\d))/g, ',')); // 합계에 쉼표 추가, 소수점 삭제
+	}
+</script>
 </html>
