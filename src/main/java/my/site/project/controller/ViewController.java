@@ -1,4 +1,4 @@
-package com.fullstack2.website.controller;
+package  my.site.project.controller;
 
 import java.security.Principal;
 import java.util.Optional;
@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.fullstack2.website.config.AdminAuthorize;
-import com.fullstack2.website.config.UserAuthorize;
-import com.fullstack2.website.dtos.MemberJoinDto;
-import com.fullstack2.website.entity.Member;
-import com.fullstack2.website.repository.MemberQuery;
-import com.fullstack2.website.service.MemberService;
-import com.fullstack2.website.oauth2.OAuth2Service;
-import com.fullstack2.website.oauth2.UserProfile;
+import  my.site.project.config.AdminAuthorize;
+import  my.site.project.config.UserAuthorize;
+import  my.site.project.dto.MemberJoinDto;
+import  my.site.project.entity.Member;
+import  my.site.project.repository.MemberQuery;
+import  my.site.project.service.MemberService;
+import  my.site.project.oauth2.OAuth2Service;
+import  my.site.project.oauth2.UserProfile;
 import com.nimbusds.oauth2.sdk.token.AccessToken;
 
 import jakarta.servlet.http.HttpSession;
