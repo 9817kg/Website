@@ -1,4 +1,4 @@
-package com.fullstack2.website.entity;
+package my.site.project.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
