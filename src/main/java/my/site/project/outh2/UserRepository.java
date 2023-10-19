@@ -1,9 +1,9 @@
-package com.fullstack2.website.oauth2;
+package my.site.project.oauth2;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.fullstack2.website.entity.Member;
+import my.site.project.entity.Member;
 
 import java.util.Optional;
 
