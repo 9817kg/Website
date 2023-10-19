@@ -1,4 +1,4 @@
-package com.fullstack2.website.repository;
+package my.site.project.repository;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.fullstack2.website.entity.QnA;
+import my.site.project.entity.QnA;
 
 
 
