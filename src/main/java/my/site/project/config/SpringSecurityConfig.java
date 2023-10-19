@@ -1,4 +1,4 @@
-package com.fullstack2.website.config;
+package  my.site.project.config;
 
 import jakarta.servlet.DispatcherType;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 
-import com.fullstack2.website.oauth2.OAuth2Service;
+import my.site.project.config.oauth2.OAuth2Service;
 
 
 
