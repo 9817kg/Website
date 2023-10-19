@@ -1,4 +1,4 @@
-package com.fullstack2.website.oauth2;
+package my.site.project.oauth2;
 
 
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.website.entity.Member;
+import my.site.project.entity.Member;
 
 import jakarta.servlet.http.HttpSession;
 
