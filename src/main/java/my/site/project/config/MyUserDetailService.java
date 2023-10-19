@@ -1,4 +1,4 @@
-package com.fullstack2.website.config;
+package  my.site.project.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.fullstack2.website.entity.Member;
-import com.fullstack2.website.service.MemberService;
+import my.site.project.entity.Member;
+import my.site.project.service.MemberService;
 
 import java.util.Optional;
 
