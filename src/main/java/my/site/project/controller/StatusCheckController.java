@@ -1,4 +1,4 @@
-package com.fullstack2.website.controller;
+package my.site.project.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
