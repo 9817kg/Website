@@ -1,4 +1,4 @@
-package com.fullstack2.website.dtos;
+package my.site.project.dto;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
