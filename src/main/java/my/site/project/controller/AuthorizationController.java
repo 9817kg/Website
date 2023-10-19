@@ -1,4 +1,4 @@
-package com.fullstack2.website.controller;
+package my.site.project.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fullstack2.website.dtos.MemberDTO;
-import com.fullstack2.website.service.RegisterMemberService;
+import my.site.project.dto.MemberDTO;
+import my.site.project.service.RegisterMemberService;
 
 
 
