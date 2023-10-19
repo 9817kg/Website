@@ -1,14 +1,14 @@
-package com.fullstack2.website.service;
+package my.site.project.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.fullstack2.website.dtos.NoticeDTO;
-import com.fullstack2.website.dtos.NoticePageRequestDTO;
-import com.fullstack2.website.dtos.NoticePageResultDTO;
-import com.fullstack2.website.entity.Notice;
-import com.fullstack2.website.repository.NoticeRepository;
+import my.site.project.dto.NoticeDTO;
+import my.site.project.dto.NoticePageRequestDTO;
+import my.site.project.dto.NoticePageResultDTO;
+import my.site.project.entity.Notice;
+import my.site.project.repository.NoticeRepository;
 
 import lombok.RequiredArgsConstructor;
 
