@@ -20,4 +20,4 @@
 - **language**: JavaScript, HTML/CSS
 - **skill**: AJAX, Thymeleaf
 
-[Web ShoppingMall 상세보기 프로젝트 💨](https://github.com/9817kg/portfolio)
+[포트폴리오 보러가기 💨](https://github.com/9817kg/portfolio)
