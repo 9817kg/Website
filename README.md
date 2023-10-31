@@ -1,42 +1,23 @@
-# Website
-<프로젝트 소개>  
-
-웹 쇼핑몰을 주제로 한 프로젝트입니다.
-
-1.게시판 로직을 응용한 qna, review, cart, 상품목록 구현
-
-2.회원가입, 로그인, 탈퇴, 회원정보 수정 (회원관리) 구현
-
-3.관리자 구현
-
-4.api 이용한 로그인
-
-5.java mail 을 이용한 임시비밀번호 전송
-
-시큐리티 passwordEncoder를 이용한 암호화를 구현했습니다.
-
-<담당한 로직>
-
-1.회원가입
-
-2.로그인
-
-3.회원탈퇴
-
-4.회원정보 수정
-
-5.소셜 API 이용한 로그인
+### 👨‍💻 Project
 
 
-6.JavaMail 이용한 임시비밀번호 전송
+#### Web ShoppingMall
+- **프로젝트 소개**: Java, Spring Boot를 이용해 쇼핑몰을 개발하였습니다.
+- **개발 기간**: [2023.09~ 10]
+- **주요 역할**: 백엔드 역할을 하며, Spring Boot 를 사용하여 MVC 패턴을 구성하고, controller, service, repository 를 구성하여 회원, 관리자 기능 위주를 개발하였습니다.
 
+#### 상세 역할
+- security에 passwordEncoder 를 하여 비밀번호 암호화 하였습니다.
+- rest API 인 kakao,google,naver 로그인 API 를 oauth2 를 이용해 구현했습니다.
+- Java Mail 을 이용해 비밀번호를 까먹을 시 가입 한 mail 로 임시비밀번호를 생성하여 전송하고 그 비밀번호는 자동으로 DB에 암호화되어 Insert 되게 구현했습니다.
+- 이메일 찾기, 회원정보 수정, 회원탈퇴 구현
 
+#### Back-end
+- **language**: Java
+- **skill**: MariaDB, Spring Boot
 
-7.이메일찾기
+#### Front-end
+- **language**: JavaScript, HTML/CSS
+- **skill**: AJAX, Thymeleaf
 
-8.비밀번호 암호화 및 세션, 시큐리티 적용
-
-9.관리자 role 로그인 시 관리자 페이지로 입장
-
-10.관리자 기능 중 전체 회원 list 출력과 회원삭제 기능 구현 (이 기능을 구현하며 게시판 기능도 구현 할 수 있게 됨.)
-
+[Web ShoppingMall 상세보기 프로젝트 💨](https://github.com/9817kg/portfolio)
