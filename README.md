@@ -22,7 +22,11 @@
 
 [포트폴리오 보러가기 💨](https://github.com/9817kg/portfolio)
 
-[채팅프로그램 view💨](https://github.com/9817kg/portfolio/assets/137484097/c55beb59-3581-4dbb-bed1-996e2a7a0b09)
+[쇼핑몰 view💨](https://github.com/9817kg/portfolio/assets/137484097/ede742d3-0ca8-438c-aca0-c7210eb425ff)
 
-<a href="http://naver.me/5Oc8kBfl" target="_blank">쇼핑몰 view</a>
+[쇼핑몰 view💨](https://github.com/9817kg/portfolio/assets/137484097/7bad6425-97ec-48a4-869a-d595b3e7d32c)
+
+[쇼핑몰 view💨](https://github.com/9817kg/portfolio/assets/137484097/c55beb59-3581-4dbb-bed1-996e2a7a0b09)
+
+
 
