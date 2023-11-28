@@ -28,5 +28,6 @@
 
 [쇼핑몰 view💨](https://github.com/9817kg/portfolio/assets/137484097/c55beb59-3581-4dbb-bed1-996e2a7a0b09)
 
+[PPT 보러가기 💨](https://docs.google.com/presentation/d/105c6f35L9HGQR4yqfremxD_ftdtlu4NleHikqzCSpGM/edit#slide=id.p1)
 
 
