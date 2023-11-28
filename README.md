@@ -21,4 +21,4 @@
 - **skill**: AJAX, Thymeleaf
 
 [포트폴리오 보러가기 💨](https://github.com/9817kg/portfolio)
-![쇼핑몰 view](https://github.com/9817kg/portfolio/assets/137484097/c55beb59-3581-4dbb-bed1-996e2a7a0b09.png)
+[쇼핑몰 view](https://mybox.naver.com/#/my/viewer/3472529558254106948:8323675?resourceKey=cnl3bHN3a2R8MzQ3MjUyOTU1ODIyOTMwODk5NnxEfDA&fileResourceKey=cnl3bHN3a2R8MzQ3MjUyOTU1ODI1NDEwNjk0OHxGfDA&downloadable=true&editable=true)
